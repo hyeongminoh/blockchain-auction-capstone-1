@@ -37,4 +37,8 @@ module.exports = function(app){
 		res.render('shop');
 	});
 
+	app.get('/signin', function (req, res) {
+		res.render('signin');
+	});
+
 }
