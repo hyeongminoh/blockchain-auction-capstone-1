@@ -41,4 +41,8 @@ module.exports = function(app){
 		res.render('signin');
 	});
 
+	app.get('/shop_digital_computer_furniture', function (req, res) {
+		res.render('shop_digital_computer_furniture');
+	});
+
 }
