@@ -1,5 +1,6 @@
 module.exports = function(app){
 
+	const db = require('../db');
 
 	app.get('/', function(req,res){
 		res.render('index')

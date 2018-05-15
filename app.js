@@ -7,7 +7,7 @@ const logger = require('morgan');
 const ejs = require('ejs');
 const app = express();
 const router = require('./router/router')(app);
-
+const db = require('./db.js');
 
 
 // view engine setup
