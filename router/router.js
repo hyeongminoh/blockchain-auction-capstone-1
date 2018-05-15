@@ -45,4 +45,8 @@ module.exports = function(app){
 		res.render('shop_digital_computer_furniture');
 	});
 
+	app.get('/resistration', function (req, res) {
+		res.render('resistration');
+	});
+
 }
