@@ -1643,6 +1643,12 @@ select option
 	font-weight: 500;
 	margin-top: 25px;
 }
+.start_price
+{
+	font-size: 16px;
+	font-weight: 500;
+	margin-top: 25px;
+}
 .product_price.discount
 {
 	color: #df3b3b;

@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="Korean">
 <head>
-<title>Single Product</title>
+<title>product</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="OneTech shop project">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="images/my_favicon.ico"/>
 <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
 <link href="plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
@@ -26,44 +27,33 @@
 
 		<!-- Top Bar -->
 
-		<div class="top_bar">
-			<div class="container">
-				<div class="row">
-					<div class="col d-flex flex-row">
-						<div class="top_bar_contact_item"><div class="top_bar_icon"><img src="images/phone.png" alt=""></div>+38 068 005 3570</div>
-						<div class="top_bar_contact_item"><div class="top_bar_icon"><img src="images/mail.png" alt=""></div><a href="mailto:fastsales@gmail.com">fastsales@gmail.com</a></div>
-						<div class="top_bar_content ml-auto">
-							<div class="top_bar_menu">
-								<ul class="standard_dropdown top_bar_dropdown">
-									<li>
-										<a href="#">English<i class="fas fa-chevron-down"></i></a>
-										<ul>
-											<li><a href="#">Italian</a></li>
-											<li><a href="#">Spanish</a></li>
-											<li><a href="#">Japanese</a></li>
-										</ul>
-									</li>
-									<li>
-										<a href="#">$ US dollar<i class="fas fa-chevron-down"></i></a>
-										<ul>
-											<li><a href="#">EUR Euro</a></li>
-											<li><a href="#">GBP British Pound</a></li>
-											<li><a href="#">JPY Japanese Yen</a></li>
-										</ul>
-									</li>
-								</ul>
-							</div>
-							<div class="top_bar_user">
-								<div class="user_icon"><img src="images/user.svg" alt=""></div>
-								<div><a href="#">Register</a></div>
-								<div><a href="#">Sign in</a></div>
+			<div class="top_bar">
+				<div class="container">
+					<div class="row">
+						<div class="col d-flex flex-row">
+							<div class="top_bar_contact_item"><div class="top_bar_icon"><img src="images/mail.png" alt=""></div><a href="mailto:fastsales@gmail.com">캡스톤디자인1</a></div>
+							<div class="top_bar_content ml-auto">
+								<div class="top_bar_menu">
+									<ul class="standard_dropdown top_bar_dropdown">
+										<li>
+											<a href="#">Korean<i class="fas fa-chevron-down"></i></a>
+											<ul>
+												<li><a href="#">English</a></li>
+											</ul>
+										</li>
+									</ul>
+								</div>
+								<div class="top_bar_user">
+									<div class="user_icon"><img src="images/user.svg" alt=""></div>
+									<div><a href="resistration">회원가입</a></div>
+									<div><a href="signin">로그인</a></div>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>		
-		</div>
-
+				</div>		
+			</div>
+			
 		<!-- Header Main -->
 
 		<div class="header_main">
@@ -73,7 +63,7 @@
 					<!-- Logo -->
 					<div class="col-lg-2 col-sm-3 col-3 order-1">
 						<div class="logo_container">
-							<div class="logo"><a href="#">OneTech</a></div>
+							<div class="logo"><a href="main_index">KHUBay</a></div>
 						</div>
 					</div>
 
@@ -83,18 +73,18 @@
 							<div class="header_search_content">
 								<div class="header_search_form_container">
 									<form action="#" class="header_search_form clearfix">
-										<input type="search" required="required" class="header_search_input" placeholder="Search for products...">
+										<input type="search" required="required" class="header_search_input" placeholder="검색 하기...">
 										<div class="custom_dropdown">
 											<div class="custom_dropdown_list">
-												<span class="custom_dropdown_placeholder clc">All Categories</span>
+												<span class="custom_dropdown_placeholder clc">전체 카테고리</span>
 												<i class="fas fa-chevron-down"></i>
 												<ul class="custom_list clc">
-													<li><a class="clc" href="#">All Categories</a></li>
-													<li><a class="clc" href="#">Computers</a></li>
-													<li><a class="clc" href="#">Laptops</a></li>
-													<li><a class="clc" href="#">Cameras</a></li>
-													<li><a class="clc" href="#">Hardware</a></li>
-													<li><a class="clc" href="#">Smartphones</a></li>
+													<li><a class="clc" href="#">전체 카테고리</a></li>
+													<li><a class="clc" href="shop_digital_computer_furniture">디지털 가전 컴퓨터</a></li>
+													<li><a class="clc" href="#">의류</a></li>
+													<li><a class="clc" href="#">뷰티</a></li>
+													<li><a class="clc" href="#">잡화</a></li>
+													<li><a class="clc" href="#">도서 티켓 여행 E쿠폰</a></li>
 												</ul>
 											</div>
 										</div>
@@ -111,7 +101,7 @@
 							<div class="wishlist d-flex flex-row align-items-center justify-content-end">
 								<div class="wishlist_icon"><img src="images/heart.png" alt=""></div>
 								<div class="wishlist_content">
-									<div class="wishlist_text"><a href="#">Wishlist</a></div>
+									<div class="wishlist_text"><a href="#">관심상품</a></div>
 									<div class="wishlist_count">115</div>
 								</div>
 							</div>
@@ -124,7 +114,7 @@
 										<div class="cart_count"><span>10</span></div>
 									</div>
 									<div class="cart_content">
-										<div class="cart_text"><a href="#">Cart</a></div>
+										<div class="cart_text"><a href="cart">장바구니</a></div>
 										<div class="cart_price">$85</div>
 									</div>
 								</div>
@@ -149,35 +139,15 @@
 							<div class="cat_menu_container">
 								<div class="cat_menu_title d-flex flex-row align-items-center justify-content-start">
 									<div class="cat_burger"><span></span><span></span><span></span></div>
-									<div class="cat_menu_text">categories</div>
+									<div class="cat_menu_text">카테고리</div>
 								</div>
 
 								<ul class="cat_menu">
-									<li><a href="#">Computers & Laptops <i class="fas fa-chevron-right ml-auto"></i></a></li>
-									<li><a href="#">Cameras & Photos<i class="fas fa-chevron-right"></i></a></li>
-									<li class="hassubs">
-										<a href="#">Hardware<i class="fas fa-chevron-right"></i></a>
-										<ul>
-											<li class="hassubs">
-												<a href="#">Menu Item<i class="fas fa-chevron-right"></i></a>
-												<ul>
-													<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>
-													<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>
-													<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>
-													<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>
-												</ul>
-											</li>
-											<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>
-											<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>
-											<li><a href="#">Menu Item<i class="fas fa-chevron-right"></i></a></li>
-										</ul>
-									</li>
-									<li><a href="#">Smartphones & Tablets<i class="fas fa-chevron-right"></i></a></li>
-									<li><a href="#">TV & Audio<i class="fas fa-chevron-right"></i></a></li>
-									<li><a href="#">Gadgets<i class="fas fa-chevron-right"></i></a></li>
-									<li><a href="#">Car Electronics<i class="fas fa-chevron-right"></i></a></li>
-									<li><a href="#">Video Games & Consoles<i class="fas fa-chevron-right"></i></a></li>
-									<li><a href="#">Accessories<i class="fas fa-chevron-right"></i></a></li>
+									<li><a href="shop_digital_computer_furniture"> 디지털 가전 컴퓨터 <i class="fas fa-chevron-right ml-auto"></i></a></li>
+									<li><a href="#">의류<i class="fas fa-chevron-right"></i></a></li>
+									<li><a href="#">뷰티<i class="fas fa-chevron-right"></i></a></li>
+									<li><a href="#">잡화<i class="fas fa-chevron-right"></i></a></li>
+									<li><a href="#">도서 티켓 여행 E쿠폰 <i class="fas fa-chevron-right"></i></a></li>
 								</ul>
 							</div>
 
@@ -185,7 +155,7 @@
 
 							<div class="main_nav_menu ml-auto">
 								<ul class="standard_dropdown main_nav_dropdown">
-									<li><a href="index.html">Home<i class="fas fa-chevron-down"></i></a></li>
+									<li><a href="#">Home<i class="fas fa-chevron-down"></i></a></li>
 									<li class="hassubs">
 										<a href="#">Super Deals<i class="fas fa-chevron-down"></i></a>
 										<ul>
@@ -221,17 +191,17 @@
 									<li class="hassubs">
 										<a href="#">Pages<i class="fas fa-chevron-down"></i></a>
 										<ul>
-											<li><a href="shop.html">Shop<i class="fas fa-chevron-down"></i></a></li>
-											<li><a href="product.html">Product<i class="fas fa-chevron-down"></i></a></li>
-											<li><a href="blog.html">Blog<i class="fas fa-chevron-down"></i></a></li>
-											<li><a href="blog_single.html">Blog Post<i class="fas fa-chevron-down"></i></a></li>
-											<li><a href="regular.html">Regular Post<i class="fas fa-chevron-down"></i></a></li>
-											<li><a href="cart.html">Cart<i class="fas fa-chevron-down"></i></a></li>
-											<li><a href="contact.html">Contact<i class="fas fa-chevron-down"></i></a></li>
+											<li><a href="shop">Shop<i class="fas fa-chevron-down"></i></a></li>
+											<li><a href="product">Product<i class="fas fa-chevron-down"></i></a></li>
+											<li><a href="blog">Blog<i class="fas fa-chevron-down"></i></a></li>
+											<li><a href="blog_single">Blog Post<i class="fas fa-chevron-down"></i></a></li>
+											<li><a href="regular">Regular Post<i class="fas fa-chevron-down"></i></a></li>
+											<li><a href="cart">Cart<i class="fas fa-chevron-down"></i></a></li>
+											<li><a href="contact">Contact<i class="fas fa-chevron-down"></i></a></li>
 										</ul>
 									</li>
-									<li><a href="blog.html">Blog<i class="fas fa-chevron-down"></i></a></li>
-									<li><a href="contact.html">Contact<i class="fas fa-chevron-down"></i></a></li>
+									<li><a href="blog">Blog<i class="fas fa-chevron-down"></i></a></li>
+									<li><a href="contact">Contact<i class="fas fa-chevron-down"></i></a></li>
 								</ul>
 							</div>
 
@@ -369,39 +339,11 @@
 						<div class="product_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum. laoreet turpis, nec sollicitudin dolor cursus at. Maecenas aliquet, dolor a faucibus efficitur, nisi tellus cursus urna, eget dictum lacus turpis.</p></div>
 						<div class="order_info d-flex flex-row">
 							<form action="#">
-								<div class="clearfix" style="z-index: 1000;">
-
-									<!-- Product Quantity -->
-									<div class="product_quantity clearfix">
-										<span>Quantity: </span>
-										<input id="quantity_input" type="text" pattern="[0-9]*" value="1">
-										<div class="quantity_buttons">
-											<div id="quantity_inc_button" class="quantity_inc quantity_control"><i class="fas fa-chevron-up"></i></div>
-											<div id="quantity_dec_button" class="quantity_dec quantity_control"><i class="fas fa-chevron-down"></i></div>
-										</div>
-									</div>
-
-									<!-- Product Color -->
-									<ul class="product_color">
-										<li>
-											<span>Color: </span>
-											<div class="color_mark_container"><div id="selected_color" class="color_mark"></div></div>
-											<div class="color_dropdown_button"><i class="fas fa-chevron-down"></i></div>
-
-											<ul class="color_list">
-												<li><div class="color_mark" style="background: #999999;"></div></li>
-												<li><div class="color_mark" style="background: #b19c83;"></div></li>
-												<li><div class="color_mark" style="background: #000000;"></div></li>
-											</ul>
-										</li>
-									</ul>
-
-								</div>
-
-								<div class="product_price">$2000</div>
+								<div class="product_price">Start price: $2000</div>
+								<input type="search" required="required" class="header_search_input" placeholder="입찰가...">
 								<div class="button_container">
-									<button type="button" class="button cart_button">Add to Cart</button>
-									<div class="product_fav"><i class="fas fa-heart"></i></div>
+								<button type="button" class="button cart_button">Add to Cart</button>
+								<div class="product_fav"><i class="fas fa-heart"></i></div>
 								</div>
 								
 							</form>
@@ -597,13 +539,13 @@
 				<div class="col-lg-3 footer_col">
 					<div class="footer_column footer_contact">
 						<div class="logo_container">
-							<div class="logo"><a href="#">OneTech</a></div>
+							<div class="logo"><a href="#">KhuBay</a></div>
 						</div>
 						<div class="footer_title">Got Question? Call Us 24/7</div>
 						<div class="footer_phone">+38 068 005 3570</div>
 						<div class="footer_contact_text">
-							<p>17 Princess Road, London</p>
-							<p>Grester London NW18JR, UK</p>
+							<p>경기도 용인시 기흥구 덕영대로</p>
+							<p>경희대학교</p>
 						</div>
 						<div class="footer_social">
 							<ul>
@@ -621,42 +563,23 @@
 					<div class="footer_column">
 						<div class="footer_title">Find it Fast</div>
 						<ul class="footer_list">
-							<li><a href="#">Computers & Laptops</a></li>
-							<li><a href="#">Cameras & Photos</a></li>
-							<li><a href="#">Hardware</a></li>
-							<li><a href="#">Smartphones & Tablets</a></li>
-							<li><a href="#">TV & Audio</a></li>
-						</ul>
-						<div class="footer_subtitle">Gadgets</div>
-						<ul class="footer_list">
-							<li><a href="#">Car Electronics</a></li>
+							<li><a href="#">디지털 가전 컴퓨터</a></li>
+							<li><a href="#">의류</a></li>
+							<li><a href="#">뷰티</a></li>
+							<li><a href="#">잡화</a></li>
 						</ul>
 					</div>
 				</div>
 
 				<div class="col-lg-2">
 					<div class="footer_column">
-						<ul class="footer_list footer_list_2">
-							<li><a href="#">Video Games & Consoles</a></li>
-							<li><a href="#">Accessories</a></li>
-							<li><a href="#">Cameras & Photos</a></li>
-							<li><a href="#">Hardware</a></li>
-							<li><a href="#">Computers & Laptops</a></li>
-						</ul>
-					</div>
-				</div>
-
-				<div class="col-lg-2">
-					<div class="footer_column">
-						<div class="footer_title">Customer Care</div>
+						<div class="footer_title">고객 서비스</div>
 						<ul class="footer_list">
-							<li><a href="#">My Account</a></li>
-							<li><a href="#">Order Tracking</a></li>
-							<li><a href="#">Wish List</a></li>
-							<li><a href="#">Customer Services</a></li>
-							<li><a href="#">Returns / Exchange</a></li>
+							<li><a href="#">내 계정</a></li>
+							<li><a href="#">주문 조회</a></li>
+							<li><a href="#">장바구니</a></li>
+							<li><a href="#">고객 서비스</a></li>
 							<li><a href="#">FAQs</a></li>
-							<li><a href="#">Product Support</a></li>
 						</ul>
 					</div>
 				</div>
