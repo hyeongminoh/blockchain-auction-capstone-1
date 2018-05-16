@@ -11,12 +11,12 @@
 
 
 ******************************/
-
+/*테스트 주석*/
 $(document).ready(function()
 {
 	"use strict";
 
-	/* 
+	/*
 
 	1. Vars and Inits
 
@@ -35,7 +35,7 @@ $(document).ready(function()
 		setHeader();
 	});
 
-	/* 
+	/*
 
 	2. Set Header
 
@@ -66,7 +66,7 @@ $(document).ready(function()
 		}
 	}
 
-	/* 
+	/*
 
 	3. Init Custom Dropdown
 
@@ -131,7 +131,7 @@ $(document).ready(function()
 		});
 	}
 
-	/* 
+	/*
 
 	4. Init Page Menu
 
