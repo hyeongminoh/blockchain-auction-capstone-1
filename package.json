@@ -14,8 +14,9 @@
   "author": "HyeongMin Oh",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.2",
+    "body-parser": "^1.18.3",
     "bootstrap": "^4.0.0-beta.2",
+    "cuid": "^2.1.1",
     "ejs": "^2.5.7",
     "electron": "^1.4.13",
     "express": "4.16.2",
@@ -26,7 +27,10 @@
     "mongoose": "^4.13.6",
     "mysql": "2.15.0",
     "node-mysql": "^0.4.2",
-    "popper.js": "^1.12.9"
+    "nodemailer": "^4.6.4",
+    "nodemailer-smtp-pool": "^2.8.3",
+    "popper.js": "^1.12.9",
+    "winston": "^2.4.2"
   },
   "devDependencies": {
     "browser-sync": "2.18.13",
