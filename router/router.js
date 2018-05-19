@@ -50,4 +50,8 @@ module.exports = function(app){
 		res.render('resistration');
 	});
 
+	app.get('/product_register', function (req, res) {
+		res.render('product_register');
+	});
+
 }
