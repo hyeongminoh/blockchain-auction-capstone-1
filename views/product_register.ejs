@@ -22,6 +22,11 @@
     <link rel="stylesheet" type="text/css" href="plugins/slick-1.8.0/slick.css">
     <link rel="stylesheet" type="text/css" href="styles/main_styles.css">
     <link rel="stylesheet" type="text/css" href="styles/responsive.css">
+    <link rel="stylesheet" href="https://unpkg.com/select-combobox/dist/combobox.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.0.0/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -58,53 +63,68 @@
         <div class="col-md-6 col-md-offset-3">
           <form role="form">
             <div class="form-group">
-              <label for="InpuTtitle">물품 이름</label>
-              <input type="title" class="form-control" id="Input_product_title" placeholder="물품 이름">
+              <label for="ItemTitle">물품 이름</label>
+              <input type="text" class="form-control" id="ItemTitle" placeholder="물품 이름">
             </div>
             <div class="form-group">
-              <label for="InputStartPrice">시작 가격(1000원부터 가능합니다)</label>
-              <input type="startprice" class="form-control" id="InputStartPrice" placeholder="시작 가격">
+              <label for="StartPrice">시작 가격(1000원부터 가능합니다)</label>
+              <input type="number" class="form-control" id="StartPrice" placeholder="시작 가격">
             </div>
             <div class="form-group">
-              <label for="InputPassword2">비밀번호 확인</label>
-              <input type="password" class="form-control" id="InputPassword2" placeholder="비밀번호 확인">
-              <p class="help-block">비밀번호 확인을 위해 다시한번 입력 해 주세요</p>
+              <label for="SellPrice">희망 가격(이 가격 이상이 되면 판매가 가능합니다)</label>
+              <input type="number" class="form-control" id="SellPrice" placeholder="희망 가격">
             </div>
             <div class="form-group">
-              <label for="username">이름</label>
-              <input type="text" class="form-control" id="username" placeholder="이름을 입력해 주세요">
+              <label for="AuctionType">경매 종류</label>
+              <select id="AuctionType" class="selectpicker">
+              <option value="0">최고가 밀봉 경매</option>
+              <option value="1">차가 밀봉 경매</option>
+              </select>
             </div>
             <div class="form-group">
-              <label for="username">이메일 인증</label>
-              <div class="input-group">
-                <input type="tel" class="form-control" id="username" placeholder="- 없이 입력해 주세요">
-                <span class="input-group-btn">
-                  <button class="btn btn-success">인증번호 전송<i class="fa fa-mail-forward spaceLeft"></i></button>
-                </span>
-              </div>
+              <label for="BidType">입찰 종류</label>
+              <select id="BidType" class="selectpicker" onchange="chageBidSelect()"> 
+                <option value="0">once 경매</option>
+                <option value="1">normal 경매 </option>
+              </select> 
+            <script>
+               function chageBidSelect(){
+               var bidSelect = document.getElementById("BidType");
+     
+               // select element에서 선택된 option의 value가 저장된다.
+               var selectValue = bidSelect.options[bidSelect.selectedIndex].value;
+               
+               // select element에서 선택된 option의 text가 저장된다.
+                var selectText = bidSelect.options[bidSelect.selectedIndex].text;
+                if(selectText == "once 경매"){
+                  alert(selectText);
+                }
+               }
+            </script>  
             </div>
             <div class="form-group">
-              <label for="username">인증번호 입력</label>
-              <div class="input-group">
-                <input type="text" class="form-control" id="username" placeholder="인증번호">
-                <span class="input-group-btn">
-                  <button class="btn btn-success">인증번호 입력<i class="fa fa-edit spaceLeft"></i></button>
-                </span>
-              </div>
+              <label for="ItemCond">물품 상태</label>
+              <select id="ItemCond" class="selectpicker"> 
+                <option value="0">새상품(박스, 부속품, 등등 모두 포함)</option>
+                <option value="1">새상품(박스, 부속품, 등등 모두 미포함)</option>
+                <option value="2">사용감존재(Good)</option>
+                <option value="2">사용감존재(acceptable)</option>
+              </select> 
             </div>
             <div class="form-group">
-                <label>약관 동의</label>
-              <div data-toggle="buttons">
-              <label class="btn btn-primary active">
-                  <span class="fa fa-check"></span>
-                  <input id="agree" type="checkbox" autocomplete="off" checked>
-              </label>
-              <a href="#">이용약관</a>에 동의합니다.
-              </div>
+              <label for="ItemDescrip">물품 설명</label>
+              <input type="text" class="form-control" id="ItemDescrip" placeholder="물품 설명">
+            </div>
+             <div class="form-group">
+              <label for="SellStartDate">판매 시작 날짜</label>
+              <input type="date" class="form-SellStartDate" id="sell_start_date" placeholder="판매 시작 날짜">
+            </div>
+            <div class="form-group">
+              <label for="Duration">판매 기간(once경매는 3, 수정불가)</label>
+              <input type="number" class="form-control" id="Duration" placeholder="판매기간">
             </div>
             <div class="form-group text-center">
-              <button type="submit" class="btn btn-info">회원가입<i class="fa fa-check spaceLeft"></i></button>
-              <button type="submit" class="btn btn-warning">가입취소<i class="fa fa-times spaceLeft"></i></button>
+              <button type="submit" class="btn btn-info">물품 등록<i class="fa fa-check spaceLeft"></i></button>
             </div>
           </form>
         </div>
@@ -112,7 +132,14 @@
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/select-combobox/dist/combobox.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.2/moment-with-locales.min.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.0.0/js/bootstrap-datetimepicker.min.js"></script>
+
   </body>
 </html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.2/moment-with-locales.min.js"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/3.0.0/js/bootstrap-datetimepicker.min.js"></script>
