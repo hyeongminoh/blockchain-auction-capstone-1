@@ -1,33 +1,20 @@
-var mysql      = require('mysql');
-var conn = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : null,
-  database : 'auction'
-});
+const mysql = require('mysql');
+const db_config = require('./config/db-config.json');
 
-// conn.connect();
-// if(conn.connect())
-// {
-//   console.log('Success');
-// }
-// else {
-//   console.log('Fail');
-// }
-// var sql = 'SELECT * FROM topic';
-// conn.query(sql, function(err, rows, fields) {
-//   if(err){
-//     console.log(err);
-//   }else{
-//     console.log('rows', rows);
-//     console.log('fields', fields);
-//   }
-// });
-conn.connect(function(err) {
-    if (err) {
-        console.error('Error:- ' + err.stack);
-        return;
+let db;
+function connectDB() {
+    if (!db) {
+        db = mysql.createConnection(db_config);
+        db.connect(function(err) {
+            if (!err) {
+                console.log('Database is connected');
+            } else {
+                console.log('Error: ', err);
+            }
+        });
     }
 
-    console.log('Connected Id:- ' + conn.threadId);
-});
+    return db;
+}
+
+module.exports = connectDB();

@@ -8,6 +8,7 @@ const ejs = require('ejs');
 const app = express();
 const router = require('./router/router')(app);
 const db = require('./db.js');
+const sha256 = require('sha256');
 
 
 // view engine setup
@@ -16,7 +17,7 @@ app.set('view engine', 'ejs');
 app.engine('html', require('ejs').renderFile);
 
 app.use(bodyParser.urlencoded({extended: false}));
-app.use(bodyParser.json());
+//app.use(bodyParser.json());
 
 
 app.use(express.static('public'));
@@ -28,4 +29,3 @@ app.locals.pretty = true;
 const server = app.listen(3000, function () {
   console.log('Listening on port 3000');
 });
-
