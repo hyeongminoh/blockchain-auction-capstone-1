@@ -72,4 +72,44 @@ module.exports = function(app){
 		res.render('product_register');
 	});
 
+<<<<<<< HEAD
 }
+=======
+	app.post("/resistration", function(req, res, next){
+  		
+  		console.log("post");
+
+  		console.log("email :", req.body.username);
+
+  		let email = req.body._email;
+ 		
+ 		console.log("email :", req.body.username);
+
+ 		let transporter = nodemailer.createTransport({
+ 		service: 'gmail',
+    	auth: {
+      		user: 'mihn0621@gmail.com',  // gmail 계정 아이디를 입력
+      		pass: 'jsklove1006'          // gmail 계정의 비밀번호를 입력
+    	}
+  		});
+ 
+  		let mailOptions = {
+    		from: 'mihn0621@gmail.com',    // 발송 메일 주소 (위에서 작성한 gmail 계정 아이디)
+    		to: email ,                     // 수신 메일 주소
+    		subject: 'Sending Email using Node.js',   // 제목
+    		text: 'That was easy!'  // 내용
+  		};
+ 
+  		transporter.sendMail(mailOptions, function(error, info){
+   			if (error) {
+    		 	console.log(error);
+   			} else {
+     			console.log('Email sent: ' + info.response);
+    		}
+  		});
+ 
+  		res.redirect("/");
+	});
+
+}
+>>>>>>> 6266ed6461cb6ce3eb140bfec7d3eb971a3a4964

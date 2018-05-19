@@ -5,8 +5,11 @@ const session = require('express-session');
 const bodyParser = require('body-parser');
 const logger = require('morgan');
 const ejs = require('ejs');
+const nodemailer = require("nodemailer");
 const app = express();
-const router = require('./router/router')(app);
+
+
+const router = require('./router/router.js')(app);
 const db = require('./db.js');
 const sha256 = require('sha256');
 
